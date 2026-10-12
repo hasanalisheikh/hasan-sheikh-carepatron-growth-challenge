@@ -1,0 +1,635 @@
+{
+ "definitions": {
+  "checkpoints": "Cumulative product events in [workspace created, + N x 24 hours), UTC.",
+  "counts": "Event counts, not unique clients, appointments or completed sessions.",
+  "source": "Fictional Carepatron internship dataset; three anonymised example workspaces."
+ },
+ "metrics": [
+  "client_created",
+  "appointment_created",
+  "note_created",
+  "ai_scribe_used",
+  "invoice_sent",
+  "client_booked_online"
+ ],
+ "practices": [
+  {
+   "id": "A",
+   "label": "Example Practice A",
+   "pattern": "Quiet start",
+   "pattern_key": "quiet",
+   "profession": "Counselor",
+   "team_size": "1",
+   "trial_start_local": "Tue 18 Aug 2026",
+   "snapshots": {
+    "3": {
+     "counts": {
+      "client_created": 0,
+      "appointment_created": 1,
+      "note_created": 0,
+      "ai_scribe_used": 0,
+      "invoice_sent": 0,
+      "client_booked_online": 0
+     },
+     "client_sources": {
+      "import": 0,
+      "manual": 0,
+      "online_booking": 0,
+      "unspecified": 0
+     },
+     "active_days": 1,
+     "workflow_types": 1,
+     "workflow_list": [
+      "appointment_created"
+     ],
+     "total_events": 1
+    },
+    "7": {
+     "counts": {
+      "client_created": 0,
+      "appointment_created": 1,
+      "note_created": 0,
+      "ai_scribe_used": 0,
+      "invoice_sent": 0,
+      "client_booked_online": 0
+     },
+     "client_sources": {
+      "import": 0,
+      "manual": 0,
+      "online_booking": 0,
+      "unspecified": 0
+     },
+     "active_days": 1,
+     "workflow_types": 1,
+     "workflow_list": [
+      "appointment_created"
+     ],
+     "total_events": 1
+    },
+    "14": {
+     "counts": {
+      "client_created": 0,
+      "appointment_created": 1,
+      "note_created": 0,
+      "ai_scribe_used": 0,
+      "invoice_sent": 0,
+      "client_booked_online": 0
+     },
+     "client_sources": {
+      "import": 0,
+      "manual": 0,
+      "online_booking": 0,
+      "unspecified": 0
+     },
+     "active_days": 1,
+     "workflow_types": 1,
+     "workflow_list": [
+      "appointment_created"
+     ],
+     "total_events": 1
+    }
+   },
+   "milestones": {
+    "appointment_created": {
+     "trial_day": 1,
+     "local_date": "Tue 18 Aug"
+    }
+   },
+   "client_milestones": {},
+   "daily": {
+    "client_created": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "appointment_created": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "note_created": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "ai_scribe_used": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "invoice_sent": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "client_booked_online": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "B",
+   "label": "Example Practice B",
+   "pattern": "Finding their rhythm",
+   "pattern_key": "rhythm",
+   "profession": "Speech Therapist",
+   "team_size": "1",
+   "trial_start_local": "Fri 21 Aug 2026",
+   "snapshots": {
+    "3": {
+     "counts": {
+      "client_created": 0,
+      "appointment_created": 0,
+      "note_created": 1,
+      "ai_scribe_used": 0,
+      "invoice_sent": 0,
+      "client_booked_online": 0
+     },
+     "client_sources": {
+      "import": 0,
+      "manual": 0,
+      "online_booking": 0,
+      "unspecified": 0
+     },
+     "active_days": 1,
+     "workflow_types": 1,
+     "workflow_list": [
+      "note_created"
+     ],
+     "total_events": 1
+    },
+    "7": {
+     "counts": {
+      "client_created": 0,
+      "appointment_created": 0,
+      "note_created": 2,
+      "ai_scribe_used": 0,
+      "invoice_sent": 0,
+      "client_booked_online": 0
+     },
+     "client_sources": {
+      "import": 0,
+      "manual": 0,
+      "online_booking": 0,
+      "unspecified": 0
+     },
+     "active_days": 2,
+     "workflow_types": 2,
+     "workflow_list": [
+      "note_created",
+      "video_call_started"
+     ],
+     "total_events": 3
+    },
+    "14": {
+     "counts": {
+      "client_created": 2,
+      "appointment_created": 0,
+      "note_created": 2,
+      "ai_scribe_used": 0,
+      "invoice_sent": 1,
+      "client_booked_online": 0
+     },
+     "client_sources": {
+      "import": 0,
+      "manual": 1,
+      "online_booking": 1,
+      "unspecified": 0
+     },
+     "active_days": 4,
+     "workflow_types": 4,
+     "workflow_list": [
+      "client_created",
+      "invoice_sent",
+      "note_created",
+      "video_call_started"
+     ],
+     "total_events": 6
+    }
+   },
+   "milestones": {
+    "client_created": {
+     "trial_day": 8,
+     "local_date": "Fri 28 Aug"
+    },
+    "note_created": {
+     "trial_day": 1,
+     "local_date": "Fri 21 Aug"
+    },
+    "invoice_sent": {
+     "trial_day": 14,
+     "local_date": "Fri 4 Sep"
+    }
+   },
+   "client_milestones": {
+    "manual": {
+     "trial_day": 14,
+     "local_date": "Fri 4 Sep"
+    },
+    "online_booking": {
+     "trial_day": 8,
+     "local_date": "Fri 28 Aug"
+    }
+   },
+   "daily": {
+    "client_created": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "appointment_created": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "note_created": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "ai_scribe_used": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "invoice_sent": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1
+    ],
+    "client_booked_online": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "C",
+   "label": "Example Practice C",
+   "pattern": "Established momentum",
+   "pattern_key": "established",
+   "profession": "Dietitian",
+   "team_size": "2-5",
+   "trial_start_local": "Sun 2 Aug 2026",
+   "snapshots": {
+    "3": {
+     "counts": {
+      "client_created": 1,
+      "appointment_created": 2,
+      "note_created": 0,
+      "ai_scribe_used": 1,
+      "invoice_sent": 0,
+      "client_booked_online": 0
+     },
+     "client_sources": {
+      "import": 0,
+      "manual": 1,
+      "online_booking": 0,
+      "unspecified": 0
+     },
+     "active_days": 2,
+     "workflow_types": 5,
+     "workflow_list": [
+      "ai_scribe_used",
+      "appointment_created",
+      "appointment_reminder_sent",
+      "client_created",
+      "template_opened"
+     ],
+     "total_events": 7
+    },
+    "7": {
+     "counts": {
+      "client_created": 1,
+      "appointment_created": 3,
+      "note_created": 1,
+      "ai_scribe_used": 1,
+      "invoice_sent": 0,
+      "client_booked_online": 0
+     },
+     "client_sources": {
+      "import": 0,
+      "manual": 1,
+      "online_booking": 0,
+      "unspecified": 0
+     },
+     "active_days": 4,
+     "workflow_types": 7,
+     "workflow_list": [
+      "ai_scribe_used",
+      "appointment_created",
+      "appointment_reminder_sent",
+      "client_created",
+      "note_created",
+      "staff_invited",
+      "template_opened"
+     ],
+     "total_events": 11
+    },
+    "14": {
+     "counts": {
+      "client_created": 3,
+      "appointment_created": 4,
+      "note_created": 2,
+      "ai_scribe_used": 4,
+      "invoice_sent": 1,
+      "client_booked_online": 1
+     },
+     "client_sources": {
+      "import": 1,
+      "manual": 1,
+      "online_booking": 1,
+      "unspecified": 0
+     },
+     "active_days": 7,
+     "workflow_types": 9,
+     "workflow_list": [
+      "ai_scribe_used",
+      "appointment_created",
+      "appointment_reminder_sent",
+      "client_booked_online",
+      "client_created",
+      "invoice_sent",
+      "note_created",
+      "staff_invited",
+      "template_opened"
+     ],
+     "total_events": 21
+    }
+   },
+   "milestones": {
+    "client_created": {
+     "trial_day": 1,
+     "local_date": "Sun 2 Aug"
+    },
+    "appointment_created": {
+     "trial_day": 1,
+     "local_date": "Sun 2 Aug"
+    },
+    "note_created": {
+     "trial_day": 4,
+     "local_date": "Thu 6 Aug"
+    },
+    "ai_scribe_used": {
+     "trial_day": 2,
+     "local_date": "Tue 4 Aug"
+    },
+    "invoice_sent": {
+     "trial_day": 11,
+     "local_date": "Thu 13 Aug"
+    },
+    "client_booked_online": {
+     "trial_day": 8,
+     "local_date": "Mon 10 Aug"
+    }
+   },
+   "client_milestones": {
+    "import": {
+     "trial_day": 8,
+     "local_date": "Mon 10 Aug"
+    },
+    "manual": {
+     "trial_day": 1,
+     "local_date": "Sun 2 Aug"
+    },
+    "online_booking": {
+     "trial_day": 11,
+     "local_date": "Thu 13 Aug"
+    }
+   },
+   "daily": {
+    "client_created": [
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "appointment_created": [
+     1,
+     1,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0
+    ],
+    "note_created": [
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "ai_scribe_used": [
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     1,
+     1,
+     0,
+     0,
+     0
+    ],
+    "invoice_sent": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "client_booked_online": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  }
+ ]
+}

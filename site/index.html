@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#F7F6F1">
+  <meta name="description" content="Momentum is a concept for a personalised trial recap in Carepatron: it shows practitioners the clients, appointments and workflows they've started managing in their first 14 days. An independent internship concept using fictional data.">
+  <title>Momentum · Look how far your practice has come</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&display=swap">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/value.css">
+  <script type="module" src="assets/app.js"></script>
+  <script type="module" src="assets/hero.js"></script>
+</head>
+<body>
+  <a class="skip" href="#momentum">Skip to Momentum</a>
+
+  <header class="nav-shell">
+    <nav class="nav" aria-label="Main">
+      <a class="wordmark" href="#top">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9"/><path d="M7 21.5c3-1 4.5-4.5 6.5-8.5s4.5-6 11.5-6"/><circle cx="24.5" cy="7" r="2.2"/></svg>
+        <span>Momentum</span>
+      </a>
+      <a class="btn btn-ink btn-sm nav-cta" href="#momentum">Explore Momentum</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Introducing Momentum</p>
+          <h1 id="hero-title">Look how far your practice <em>has come.</em></h1>
+          <p class="lede">Your first two weeks are full of small wins. Momentum brings them together, shows why they could matter to your practice, how much admin time they could save, and helps you decide what's worth carrying on with.</p>
+          <div class="hero-actions">
+            <a class="btn btn-ink btn-lg" href="#momentum" data-go-mode="preview">Explore your Momentum<svg aria-hidden="true" viewBox="0 0 20 20"><path d="M4 10h11m-4-4 4 4-4 4"/></svg></a>
+            <a class="btn btn-quiet btn-lg" href="#momentum" data-go-mode="examples">Preview with sample data</a>
+          </div>
+          <ol class="hero-steps" aria-label="How Momentum works">
+            <li><b>Recognise</b> what you've brought in</li>
+            <li><b>Understand</b> how much admin time it could save</li>
+            <li><b>Continue</b> what fits your practice</li>
+          </ol>
+        </div>
+
+        <figure class="stage" data-stage role="img" aria-label="Animated illustration: over fourteen trial days, a fictional example practice's first milestones appear along a timeline, checkpoints at Day 3, 7 and 14 note whether it kept going, and a Day 14 recap shows what happened, what continued and one next step.">
+          <div class="win" aria-hidden="true">
+            <div class="win-bar">
+              <span class="win-dots"><i></i><i></i><i></i></span>
+              <span class="win-title">Momentum<span class="win-sub" data-hero-label>Example practice</span></span>
+              <span class="win-status" data-hero-status>Getting started</span>
+              <span class="win-day"><span class="win-day-k">Day</span> <b data-hero-day>1</b><span class="win-day-of">of 14</span></span>
+            </div>
+            <div class="track-wrap">
+              <div class="track">
+                <div class="track-fill" data-hero-fill></div>
+                <div class="track-glint"></div>
+                <ol class="ticks" data-hero-ticks></ol>
+              </div>
+              <ol class="hero-milestones" data-hero-milestones></ol>
+              <ol class="hero-days" data-hero-days></ol>
+            </div>
+            <div class="hero-metrics" data-hero-metrics></div>
+            <div class="hero-recap">
+              <p class="hero-recap-k">Day 14 recap</p>
+              <p class="hero-recap-h">Your practice has really taken shape.</p>
+              <dl class="hero-recap-rows">
+                <div><dt>What happened</dt><dd data-hero-happened></dd></div>
+                <div><dt>Kept going</dt><dd data-hero-kept></dd></div>
+                <div><dt>Time</dt><dd data-hero-time></dd></div>
+              </dl>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="momentum" id="momentum" aria-labelledby="momentum-title">
+      <div class="section-head">
+        <p class="eyebrow eyebrow-light"><span class="step-n">01</span>Your progress</p>
+        <h2 id="momentum-title">See a trial come together.</h2>
+        <p>What a practice has brought into Carepatron, what it could mean, and whether it carried on. Explore three example practices, or preview a recap from your own numbers.</p>
+      </div>
+
+      <div class="modes" role="tablist" aria-label="Momentum mode">
+        <button class="mode" role="tab" id="mode-examples" aria-controls="panel-examples" aria-selected="true" data-mode="examples">Example practices</button>
+        <button class="mode" role="tab" id="mode-preview" aria-controls="panel-preview" aria-selected="false" data-mode="preview" tabindex="-1">Preview your own</button>
+        <span class="mode-thumb" aria-hidden="true"></span>
+      </div>
+
+      <p class="sr-only" role="status" aria-live="polite" data-announce></p>
+
+      <!-- Example practices: every number comes from site/data/momentum_examples.json -->
+      <div class="panel" id="panel-examples" role="tabpanel" aria-labelledby="mode-examples">
+        <p class="scope-note">Fictional practices. In a connected product these counts would come from existing workspace events, so nobody reconstructs them by hand.</p>
+        <div class="practices" role="radiogroup" aria-label="Example practice" data-practices></div>
+
+        <div class="app" id="recap">
+          <div class="app-top">
+            <div class="checkpoints" role="radiogroup" aria-label="Trial checkpoint" data-checkpoints>
+              <span class="cp-line" aria-hidden="true"><span class="cp-line-fill" data-cp-fill></span></span>
+            </div>
+            <span class="badge badge-data">Fictional data</span>
+          </div>
+
+          <div class="app-grid">
+            <article class="recap" aria-labelledby="ex-headline">
+              <p class="recap-k" data-ex-kicker></p>
+              <h3 class="recap-h" id="ex-headline" data-ex-headline></h3>
+              <div class="recap-text" data-ex-sentences></div>
+              <div class="continuation" data-ex-continuation hidden></div>
+              <div class="next next-top" data-ex-next hidden></div>
+
+              <div class="chart-card">
+                <div class="chart-head">
+                  <h4>Activity across the first 14 days</h4>
+                  <p class="chart-sub" data-ex-chart-sub></p>
+                </div>
+                <div class="chart" data-ex-chart></div>
+                <ul class="legend" data-legend aria-label="Legend"></ul>
+              </div>
+
+            </article>
+
+            <aside class="side">
+              <section class="metrics-card" aria-labelledby="ex-metrics-title">
+                <h4 id="ex-metrics-title">Activity so far</h4>
+                <ul class="metrics" data-ex-metrics></ul>
+              </section>
+            </aside>
+          </div>
+          <section class="milestones-card milestones-band" aria-labelledby="ex-ms-title">
+            <h4 id="ex-ms-title">Milestones</h4>
+            <ul class="milestones milestones-row" data-ex-milestones></ul>
+          </section>
+          <section class="meaning meaning-row" aria-labelledby="ex-meaning-title">
+            <h4 id="ex-meaning-title"><span class="step-n">02</span>What it means</h4>
+            <ul class="stories" data-ex-stories></ul>
+          </section>
+        </div>
+      </div>
+
+      <!-- Preview your own: numbers stay in this browser -->
+      <div class="panel" id="panel-preview" role="tabpanel" aria-labelledby="mode-preview" hidden>
+        <div class="app">
+          <div class="app-top">
+            <div class="checkpoints" role="radiogroup" aria-label="Checkpoint" data-preview-day></div>
+            <span class="badge badge-own">Your numbers</span>
+          </div>
+
+          <form class="builder" data-preview-form novalidate>
+            <div class="builder-head">
+              <h3>Your trial so far</h3>
+              <p>Type in totals from your workspace. This prototype isn't connected to a Carepatron account, so these are typed numbers, not retrieved ones. In a connected product, these would come from workspace events. Leave anything you don't know blank. Nothing you type leaves this page.</p>
+            </div>
+            <fieldset class="field">
+              <legend data-preview-legend>Totals by Day 7</legend>
+              <div class="counters" data-preview-counts></div>
+              <p class="hint">Each checkpoint keeps its own totals. A checkpoint you haven't filled in carries forward the last total before it.</p>
+            </fieldset>
+            <button class="link-btn" type="button" data-preview-reset>Clear all</button>
+          </form>
+
+          <article class="recap-own" data-print-target aria-labelledby="own-headline">
+            <div class="app-grid">
+              <div class="recap">
+                <p class="recap-k" data-own-kicker></p>
+                <h3 class="recap-h" id="own-headline" data-own-headline></h3>
+                <div class="recap-text" data-own-sentences></div>
+                <div class="continuation" data-own-continuation hidden></div>
+                <div class="next next-top" data-own-next hidden></div>
+                <div class="chart-card" aria-labelledby="own-chart-title">
+                  <div class="chart-head">
+                    <h4 id="own-chart-title">Your totals across the trial</h4>
+                    <p class="chart-sub" data-own-chart-sub>Entered at Day 3, 7 and 14</p>
+                  </div>
+                  <div class="chart" data-own-chart></div>
+                  <ul class="legend" data-own-legend aria-label="Legend"></ul>
+                </div>
+              </div>
+              <aside class="side">
+                <section class="metrics-card" aria-labelledby="own-metrics-title">
+                  <h4 id="own-metrics-title">Activity so far</h4>
+                  <ul class="metrics is-instant" data-own-metrics></ul>
+                </section>
+              </aside>
+            </div>
+            <section class="milestones-card milestones-band" aria-labelledby="own-ms-title">
+              <h4 id="own-ms-title">Milestones</h4>
+              <ul class="milestones milestones-row" data-own-milestones></ul>
+            </section>
+            <section class="meaning meaning-row" aria-labelledby="own-meaning-title">
+              <h4 id="own-meaning-title"><span class="step-n">02</span>What it means</h4>
+              <ul class="stories" data-own-stories></ul>
+            </section>
+            <div class="recap-actions">
+              <button class="btn btn-ink btn-sm" type="button" data-copy>Copy recap</button>
+              <button class="btn btn-quiet btn-sm" type="button" data-print>Save as PDF</button>
+              <span class="copy-status" data-copy-status role="status"></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="value" id="value" aria-labelledby="value-title">
+      <div class="value-inner">
+        <div class="section-head section-head-dark">
+          <p class="eyebrow"><span class="step-n">03</span>Potential value</p>
+          <h2 id="value-title">What could this mean for your time?</h2>
+          <p>Recorded activity shows what happened. The explorer shows what a different way of working could mean, using numbers you set. It isn't a measurement.</p>
+        </div>
+
+        <div class="explorer">
+          <form class="explorer-form" data-impact-form novalidate>
+            <fieldset class="field">
+              <legend>Workflow</legend>
+              <div class="switch" role="radiogroup" aria-label="Workflow" data-impact-workflow></div>
+            </fieldset>
+            <div class="impact-fields" data-impact-fields></div>
+            <p class="hint" data-impact-hint></p>
+            <button class="link-btn" type="button" data-impact-reset>Reset numbers</button>
+          </form>
+
+          <div class="impact-result" aria-live="polite" data-impact-result>
+            <p class="impact-k">Your potential time difference <span class="impact-tag">Hypothetical</span></p>
+            <p class="impact-big" data-impact-big>—</p>
+            <p class="impact-sentence" data-impact-sentence></p>
+            <div class="impact-bars" aria-hidden="true">
+              <div class="impact-bar"><span>Before</span><i data-impact-before></i><b data-impact-before-v></b></div>
+              <div class="impact-bar is-now"><span>Now</span><i data-impact-now></i><b data-impact-now-v></b></div>
+            </div>
+            <p class="impact-note">Calculated only from the three numbers on the left. Published figures below are shown for context and are never added to it.</p>
+          </div>
+        </div>
+
+        <div class="evidence">
+          <div class="evidence-head">
+            <h3>What others report <span data-evidence-for></span></h3>
+            <p>Company claims and independent research, labelled by source. Neither is a result for your practice.</p>
+          </div>
+          <ul class="evidence-grid" data-evidence></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="reflect" id="reflect" aria-labelledby="reflect-title">
+      <div class="reflect-inner">
+        <div class="reflect-ask">
+          <p class="eyebrow eyebrow-light"><span class="step-n">04</span>What matters to you</p>
+          <h2 id="reflect-title">What's felt most useful so far?</h2>
+          <p class="reflect-sub">You can skip this. Your answer shapes the reflection and the suggested next step, and stays on this page.</p>
+          <div class="priorities" role="radiogroup" aria-labelledby="reflect-title" data-priorities></div>
+          <button class="link-btn" type="button" data-priority-clear hidden>Clear my answer</button>
+        </div>
+
+        <article class="reflection" aria-labelledby="reflection-title">
+          <p class="eyebrow"><span class="step-n">05</span>Your next step</p>
+          <h3 id="reflection-title" data-reflection-title>Your trial in review</h3>
+          <p class="reflection-for" data-reflection-for></p>
+          <div class="pick-row">
+            <div class="switch" role="radiogroup" aria-label="Checkpoint for the reflection" data-reflection-day></div>
+            <div class="switch" role="radiogroup" aria-label="Recap this reflection uses" data-reflection-source></div>
+          </div>
+          <ol class="reflection-list" data-reflection-list></ol>
+          <div class="recap-actions">
+            <button class="btn btn-ink btn-sm" type="button" data-reflection-copy>Copy summary</button>
+            <span class="copy-status" data-reflection-status role="status"></span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <span class="wordmark wordmark-light"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9"/><path d="M7 21.5c3-1 4.5-4.5 6.5-8.5s4.5-6 11.5-6"/><circle cx="24.5" cy="7" r="2.2"/></svg><span>Momentum</span></span>
+        <p>An independent internship concept by Hasan Sheikh for Carepatron's AI Growth Marketer challenge.</p>
+      </div>
+      <dl>
+        <div><dt>Not a Carepatron product</dt><dd>No integration, partnership or endorsement is implied.</dd></div>
+        <div><dt>Fictional examples</dt><dd>Example practices come from a fictional dataset. Counts are recorded events, not unique clients or completed sessions.</dd></div>
+        <div><dt>Your numbers stay here</dt><dd>Preview totals are never sent anywhere. Don't enter client details.</dd></div>
+      </dl>
+    </div>
+  </footer>
+</body>
+</html>

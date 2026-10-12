@@ -1,0 +1,31 @@
+# Python
+.venv
+.venv.nosync/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Environment and secrets
+.env
+.env.*
+
+# OS, editor and tool output
+.DS_Store
+.vercel/
+.netlify/
+node_modules/
+.claude/
+tmp/
+*.tmp
+
+# Private working documents (the written submission lives in a Google Doc)
+docs/AI_LOG.md
+docs/SOURCES.md
+docs/WRITEUP.md
+docs/DRAFT_WRITEUP.md
+
+# Local archive of superseded prototypes
+docs/archive/
+
+# Growth challenge write-up (kept out of the public repo)
+submission/

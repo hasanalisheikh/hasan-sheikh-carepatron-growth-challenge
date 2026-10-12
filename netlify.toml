@@ -1,0 +1,13 @@
+[build]
+  publish = "site"
+
+# Static site only: no functions, no API keys. Scripts and styles are external files so the
+# policy can forbid inline code. The only third party is Google Fonts. The two hashes allow exactly the
+# inline snippets Netlify injects into every deployed page; nothing else inline is permitted.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-mTJ4cJaTm2Gw95GeXEpZdvEEY9ybh6FZu1bwcNE7QlY='; style-src 'self' https://fonts.googleapis.com 'unsafe-hashes' 'sha256-ub2coz0vdXxLjDR1XK06dX5jni9HwD8GCWYYGVRVCSM=' 'sha256-z06o4kCVwr4GsVmIkTYygqZrev+aqqJw5Y5LiiGF2SQ='; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self' blob:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
